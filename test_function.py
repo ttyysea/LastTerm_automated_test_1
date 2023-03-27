@@ -37,6 +37,12 @@ def test_people_1_van_9_car_1_input_104():
     actual_result = validate_number(input)
     assert expected_result == actual_result
 
+def test_people_2_van_9090_car_2_input_100000():
+    input = 100000
+    expected_result = (2, 9090, 2)
+    actual_result = validate_number(input)
+    assert expected_result == actual_result
+
 def test_number_not_integer_input_abc():
     input = "abc"
     expected_result = "number is not integer."
