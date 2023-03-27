@@ -8,7 +8,7 @@ def validate_number(number):
         van = 0
         car = 0
 
-        while people > 0:
+        while people >= 0:
             if people >= 11:
                 people -= 11
                 van += 1
@@ -21,10 +21,8 @@ def validate_number(number):
 
 
 def display_result(result):
-    people, van, car = result
-    print("Number of used vans: ", van ,"vans")
-    print("Number of used cars: ", car ,"cars")
-    print("Number of people left: ", people ,"people")
-
-    
-    
+    if isinstance(result, str):
+        print(result)
+    else:
+        people, van, car = result
+        print("Number of used vans: ", van, "vans\nNumber of used cars: ", car, "cars\nNumber of people left: ", people, "people")
